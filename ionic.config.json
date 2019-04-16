@@ -1,5 +1,7 @@
 {
   "name": "jeresoft",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
