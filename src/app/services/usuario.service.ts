@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 import { resolve } from 'q';
 import { Usuario } from '../interfaces/interfaces';
+import { identity } from 'rxjs';
+import { NavController } from '@ionic/angular';
 
 
 const URL = environment.url;
@@ -13,10 +15,12 @@ const URL = environment.url;
   providedIn: 'root'
 })
 export class UsuarioService {
-
-  token: string = null;
+  identity = null;
+  private usuario: Usuario = {};
   constructor(private htpp: HttpClient,
-              private storage: Storage) { }
+              private storage: Storage,
+              private navCtrl: NavController) {
+              }
 
               login(email: string, password: string) {
                 const data = {
@@ -27,24 +31,35 @@ export class UsuarioService {
                 return new Promise( resolve => {
                   this.htpp.post(`${URL}/user/login`, data)
                 .subscribe( resp => {
-                  console.log(resp);
-
                   if (resp['ok']) {
-                    console.log('entro');
                     resolve(true);
                   } else {
                     resolve(false);
-
                   }
 
                 });
                 });
               }
 
-              registro( usuario: Usuario ){
+              registro( usuario: Usuario ) {
+                  return new Promise( resolve =>{
+                    this.htpp.post(`${URL}/user/create`, usuario)
+                    .subscribe(resp => {
+                      console.log(resp);
+                      if (resp['ok']) {
+                        console.log('se registro');
+                        resolve(true);
+                      } else {
+                        resolve(false);
+                      }
 
+                    })
+                  });
               }
 
+              logout(){
+                this.navCtrl.navigateRoot('/login', {animated: true});
+              }
 }
 
 
