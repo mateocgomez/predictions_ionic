@@ -38,7 +38,7 @@ registerUser: Usuario = {
     }
 
   const valido = await this.usuarioService.login(this.loginUser.email, this.loginUser.password);
- 
+  console.log(valido);
 
     if ( valido ) {
       // entramos al dashboard
@@ -60,7 +60,7 @@ registerUser: Usuario = {
     }
 
     const valido = await this.usuarioService.registro(this.registerUser);
-
+    
     if ( valido ) {
       // entramos al dashboard
       this.navCtrl.navigateRoot( 'main/tabs/tab1', {
