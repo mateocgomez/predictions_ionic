@@ -18,7 +18,7 @@ export class Tab1Page {
         data: {
             labels: ["Ivan Duque", "Gustavo Petro", "Sergio Fajardo", "German Vargas"],
             datasets: [{
-              label: "My First dataset",
+              label: "Favorabilidad en Twitter",
               backgroundColor: [
                 'rgba(26, 128, 182, 0.2)',
                 'rgba(87, 35, 100, 0.2)',
