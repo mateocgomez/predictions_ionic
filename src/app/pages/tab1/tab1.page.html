@@ -1,41 +1,107 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
-    </ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-title>
+            Bienvenido a JereSoft
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
+
+
+    <ion-row class="ion-padding">
+
+        <div style="position: relative; height:200px; width:400px">
+            <canvas id="canvas-chart"></canvas>
+        </div>
+    </ion-row>
+
+
+    <ion-card>
+
+        <ion-card-content>
+            En esta grafica podemos observar en tiempo real la favorabilidad de los candidatos presidenciales... Mediante la implementación de un
+            <ion-text color="danger"><sub>modelo predictivo</sub></ion-text> se obtiene los
+            <ion-text color="primary"><i>tweets</i></ion-text> en tiempo real. Una vez procesado los datos la siguiente grafica
+            <ion-text color="primary"><i>nos muestra</i></ion-text> un porcentaje de la favorabilidad del candidato.
+        </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+    <ion-text color="dark" text-center>
+        <h1>CANDIDATOS</h1>
+    </ion-text>
+
+
+
+    <ion-row>
+        <ion-card>
+            <ion-col size="12" text-center>
+                <img src="assets/avatars/ivan.png" class="candidatos-img">
+            </ion-col>
+            <ion-card-header>
+                <ion-card-subtitle>Centro Democratico</ion-card-subtitle>
+                <ion-card-title>Iván Duque</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                Iván Duque Márquez (Bogotá, 1 de agosto de 1976) es un abogado, escritor y político colombiano. Es el actual presidente de Colombia por el Partido Centro Democrático. Ejerció como senador de la República de Colombia desde el 20 de julio de 2014 hasta
+                el 10 de abril de 2018.4​1​5​2​3​ Trabajó como representante de Colombia ante el Banco Interamericano de Desarrollo (BID). Asumió el cargo de presidente de Colombia el 7 de agosto de 2018 en la Plaza de Bolívar, de Bogotá.
+            </ion-card-content>
+        </ion-card>
+    </ion-row>
+
+    <ion-row>
+        <ion-card>
+            <ion-col size="12" text-center>
+                <img src="assets/avatars/gustavo.jpg" class="candidatos-img">
+            </ion-col>
+            <ion-card-header>
+                <ion-card-subtitle>Movimiento Progresista</ion-card-subtitle>
+                <ion-card-title>Gustavo Petro</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                Gustavo Francisco Petro Urrego (Ciénaga de Oro, Córdoba, 19 de abril de 1960) es un político y economista colombiano, hijo de inmigrantes italianos,1​2​ exmilitante del M-19 y actual Senador de la República para el periodo 2018-2022. Fue candidato para
+                la presidencia de Colombia en 2010 y 2018.
+            </ion-card-content>
+        </ion-card>
+    </ion-row>
+
+
+    <ion-row>
+        <ion-card>
+            <ion-col size="12" text-center>
+                <img src="assets/avatars/sergio.jpg" class="candidatos-img">
+            </ion-col>
+            <ion-card-header>
+                <ion-card-title>Sergio Fajardo</ion-card-title>
+                <ion-card-subtitle>Alianza Verde</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+                Sergio Fajardo Valderrama (Medellín, 19 de junio de 1956) es un político, matemático y profesor universitario colombiano. Fue Alcalde de Medellín de 2004 a 2007, fórmula vicepresidencial del candidato Antanas Mockus en las elecciones presidenciales de
+                2010, Gobernador del departamento de Antioquia de 2012 a 2015 y candidato a la Presidencia de la República por la Coalición Colombia, conformada por el Polo Democrático Alternativo, la Alianza Verde y el Movimiento Compromiso Ciudadano
+                en las elecciones de 2018.
+            </ion-card-content>
+        </ion-card>
+    </ion-row>
+
+    <ion-row>
+        <ion-card>
+            <ion-col size="12" text-center>
+                <img src="assets/avatars/german.jpg" class="candidatos-img">
+            </ion-col>
+            <ion-card-header>
+                <ion-card-title>Germán Vargas Lleras</ion-card-title>
+                <ion-card-subtitle>Cambio Radical</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+                Germán Vargas Lleras (Bogotá, Colombia; 19 de febrero de 1962) es un político y abogado colombiano, graduado de la Universidad del Rosario. Fue Senador de la República de Colombia, cargo que ocupó por elección popular desde 1994 a 2008, llegando a obtener
+                la votación más alta del país en las elecciones legislativas de 2006. Ha sido además presidente del Senado de la República, jefe del Partido Cambio Radical, candidato a la Presidencia de la República en 2010, Ministro del Interior y de
+                Justicia y Ministro de Vivienda, Ciudad y Territorio.
+            </ion-card-content>
+        </ion-card>
+    </ion-row>
 </ion-content>
