@@ -7,17 +7,17 @@ import { TwitterSerivice } from '../../services/twitter.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  messagesv: Array<string> = ["a", "b"];
+  user: Array<string> = [];
+
+  
 
   constructor(private messageTwitter: TwitterSerivice){}
   ngOnInit(): void {
     this.messageTwitter.messages.subscribe(msg=>{
-      this.messagesv.unshift(msg.nombre)
-    });
-  }
+      this.user.unshift(msg.user, msg.message );
+     
 
-  sendMessage(){
-    this.messageTwitter.sendMsg('test message');
+    });
   }
 
 
