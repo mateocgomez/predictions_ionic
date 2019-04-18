@@ -12,28 +12,44 @@ export class Tab1Page {
     var ctx = (<any>document.getElementById('canvas-chart')).getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'polarArea',
+        type: 'bar',
 
         // The data for our dataset
         data: {
             labels: ["Ivan Duque", "Gustavo Petro", "Sergio Fajardo", "German Vargas"],
             datasets: [{
-              label: "Favorabilidad en Twitter",
-              backgroundColor: [
-                'rgba(26, 128, 182, 0.2)',
-                'rgba(87, 35, 100, 0.2)',
+              label: "Positivo",
+              backgroundColor: 
                 'rgba(0, 129, 60, 0.2)',
-                'rgba(200, 0, 21, 0.2)',
-              ],
-              borderColor: [
-                'rgba(26, 128, 182,1)',
-                'rgba(87, 35, 100, 1)',
+              borderColor:
                 'rgba(0, 129, 60, 1)',
-                'rgba(200, 0, 21, 0.2)',
-              ],
+              
               data: [500, 150, 250, 300],
               borderWidth: 1
-            }]
+            },
+            {
+              label: "Negativo",
+              backgroundColor:
+                'rgba(200, 0, 21, 0.2)',
+              
+              borderColor:
+                'rgba(200, 0, 21, 1)',
+              
+              data: [200, 50, 200, 75],
+              borderWidth: 1
+            },
+            {
+              label: "Neutro",
+              backgroundColor:
+                'rgba(87, 35, 100, 0.2)',
+              
+              borderColor: 
+                'rgba(87, 35, 100, 1)',
+              
+              data: [500, 150, 250, 300],
+              borderWidth: 1
+            },
+          ]
        }
     });
   }
