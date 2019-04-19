@@ -14,16 +14,29 @@
 
     <ion-card>
 
-        <ion-row>
+        <ion-row ion-padding>
+            <div style="position: relative; height:200px; width:400px; margin-top:30px; margin-bottom: -47px;">
+                <canvas id="pro-chart"></canvas>
+            </div>
+        </ion-row>
 
+        <ion-card-content text-center>
+            <p class="texto">En este grafico podemos observar la cantidad de tweets que se han clasificado en Positivo, Negativo y Neutro respectivamente.
+            </p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+
+        <ion-row ion-padding>
             <div style="position: relative; height:200px; width:400px; margin-top:30px; margin-bottom: -47px;">
                 <canvas id="canvas-chart"></canvas>
             </div>
         </ion-row>
 
         <ion-card-content text-center>
-            <p class="texto">En esta grafica podemos observar en tiempo real la favorabilidad de los candidatos presidenciales... Mediante la implementación de un modelo predictivo se obtienen los tweets, se procesan y obtenemos los resultados. un porcentaje de la favorabilidad del
-            candidato.</p>
+            <p class="texto">En este grafico podemos observar los porcentajes de Positivo, Negativo y Neutro respectivamente.
+            </p>
         </ion-card-content>
     </ion-card>
 

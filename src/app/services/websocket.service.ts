@@ -13,7 +13,6 @@ export class WebsocketService{
         this.socket = io(environment.url);
         let observable = new Observable(observer=>{
             this.socket.on('messages',(data)=>{
-                console.log("mensaje recibidos");
                 observer.next(data);
             })
             return ()=>{
