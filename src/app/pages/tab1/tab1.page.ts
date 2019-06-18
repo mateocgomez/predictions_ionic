@@ -130,6 +130,12 @@ export class Tab1Page {
 
   ngOnInit() {
     this.messageTwitter.messages.subscribe(msg => {
+      console.log('Petro +',msg.calculate['@petrogustavo'].positivo);
+      console.log('Petro -',msg.calculate['@petrogustavo'].negativo);
+      console.log('Petro -/+',msg.calculate['@petrogustavo'].neutro);
+      console.log('Duque +',msg.calculate['@IvanDuque'].positivo);
+      console.log('Duque -',msg.calculate['@IvanDuque'].negativo);
+      console.log('Duque -/+',msg.calculate['@IvanDuque'].neutro);
       this.useAnotherOneWithWebpack(msg);
       this.chartk(msg);
     });

@@ -14,7 +14,6 @@ export class Tab2Page {
   ngOnInit(): void {
     this.messageTwitter.messages.subscribe(msg=>{
       this.user.unshift(msg.user, msg.message );
-      console.log(msg.calculate['@IvanDuque'].positivo);
     });
   }
 
